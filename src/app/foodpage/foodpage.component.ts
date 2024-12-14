@@ -15,6 +15,7 @@ food!:Foods;
     activatedRoute.params.subscribe((params)=>{
       if(params['id'])
       this.food = foodService.getFoodById(params['id'])
+      this.food.imageUrl = "https://manish4648.github.io/food/" + this.food.imageUrl
     })
    }
 
