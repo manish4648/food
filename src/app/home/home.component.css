@@ -1,0 +1,72 @@
+ul{
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    
+}
+ul li a {
+    height:200px;
+    width: 200px;
+    border: 1px solid black;
+    box-shadow: 10%;
+    border-radius: 10rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: blanchedalmond;
+    
+}
+li:hover{
+   
+    height: 340px;
+    width: 290px;
+    overflow: hidden;
+    transition: 1.5s;           
+    border: 1px solid rgb(236, 216, 102);
+    border-radius:10rem;
+    text-align: center;
+    text-overflow: ellipsis;
+}
+.content{
+    padding: 0;
+    position: relative;
+}
+.product-item-footer:hover{
+    color: antiquewhite;
+    transition: 0.5s;  
+  
+}
+.origins{
+    flex: 9;
+}
+.origins span{
+   
+    border-radius: 2rem;
+    font-size: .7rem;
+    margin-right: .3rem;
+    display: inline;
+
+}
+.cook-time{
+    font-size: 0.9rem;
+}
+.price{
+    color:#424242;
+    margin-top:.2rem ;
+}
+.price:hover{
+    color:rgb(182, 136, 136);
+    margin-top:.2rem ;
+    transition: 2s;
+}
+.price button{
+    text-overflow: ellipsis;
+    height: 60px;
+    width: 60px;
+}

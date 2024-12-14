@@ -1,0 +1,28 @@
+<app-header></app-header>
+<app-not-found [visilbe]="!food " notFoundMessage="Product Not Found!" resetLinkText="Go to HomePage"></app-not-found>
+<div *ngIf="food"  class="container">
+    <img [src]="food.imageUrl" [alt]="food.nameit">
+</div>
+<div class="details">
+    <div class="header"><span class="name">
+        {{food.nameit}}
+    </span>
+</div>
+<div class="origins">
+    <span *ngFor="let origin of food.origins">
+        {{origin}}
+    </span>
+</div>
+<div class="tag">
+    <app-tags [foodPageTags]="food.tags" justifyContant="start"></app-tags>
+</div>
+<div class="cook-time">
+    <span>
+        Time to cook about<strong>-{{food.coolTime}}</strong>min
+    </span>
+</div>
+<div class="price"><span>
+    {{food.price|currency:'INR':'symbol-narrow'}}
+</span></div>
+<button (click)="addToCart()">Add to cart</button>
+</div>

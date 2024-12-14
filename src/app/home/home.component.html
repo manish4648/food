@@ -1,0 +1,26 @@
+<app-header></app-header>
+<app-search></app-search>
+<app-tags></app-tags>
+<app-not-found [visilbe]="!foods || foods.length<=0" resetLinkText="reset search"></app-not-found>
+<ul>
+    <li *ngFor="let food of foods">
+        <a routerLink="/food/{{food.id}}">
+            <img src="{{food.imageUrl}}" alt="food imgs">
+        </a>
+        <div class="content">
+            <div class="name">
+                {{food.nameit}}
+             </div>
+             <!-- <span class="favorite" {{food.fav}}></span> -->
+             <div class="product-item-footer">
+                 <div class="origins">
+                     <span *ngFor="let origin of food.origins">{{origin}}</span>
+                    </div>
+                    <div class="cook-time"><span><i class="fas fa-clock">Time</i></span>{{food.coolTime}}</div>
+                    <div class="price">
+                        {{food.price|currency:'INR':'symbol-narrow'}}
+                    </div>
+                </div> 
+        </div>
+    </li>
+</ul>

@@ -1,0 +1,75 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+}
+.container > *{
+   width: 15rem;
+   height: 15rem;
+}
+img{
+    border-radius:10rem;
+    object-fit: cover;
+    height: 10rem;
+    margin: 1rem;
+}
+.details{
+    display: flex;
+    flex-direction: column; 
+    flex:1 0;
+    border-radius: 3rem;
+    padding: 2rem;
+    margin-left: 1rem;
+}
+.details .header{
+    display: flex;
+    justify-content: space-between;
+}
+.details .name{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.details .origins{
+    display: flex;
+    flex-wrap: wrap;
+}
+.details .origins >span{
+    padding:0;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+}
+.details .cook-time span{
+    padding: .1rem;
+}
+.details .price{
+    font-size: 1.8rem;
+    margin: 0.2rem 0.2rem 0.2rem 0;
+    
+}
+.details .price :hover{
+    color: beige;
+    transition: 1s;
+}
+.details .price::before{
+    content:"Price: ";
+    color: gray;
+}
+.details button{
+    color:black;
+    background-color: rgb(182, 136, 136);
+    border: none;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 12%;
+    outline: none;
+}
+div button:hover{
+    background-color: white;
+    color: gray;
+    transition: 1s;
+    cursor: pointer;
+    opacity: 10;
+}
