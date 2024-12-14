@@ -23,7 +23,7 @@ export class CartPageComponent implements OnInit {
 
   setCart(){
     this.cart = this.cartService.getCart();
-    this.cart.items.map(e=>e.food.imageUrl = "https://manish4648.github.io/food/"+e.food.imageUrl)
+    //this.cart.items.map(e=>e.food.imageUrl = "https://manish4648.github.io/food/"+e.food.imageUrl)
   }
   removeFromCart(cartItem:CartItem){
     this.cartService.removeFromCart(cartItem.food.id);
